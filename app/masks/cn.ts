@@ -235,6 +235,30 @@ export const CN_MASKS: BuiltinMask[] = [
     builtin: true,
   },
   {
+    avatar: "1f504",
+    name: "文本降重",
+    context: [
+      {
+        role: "system",
+        content: "你将充当一个文本改写和润色专家。你会认真阅读并深入理解用户输入的文本，并尽你最大的可能，对一切词语和句子进行替换和重写，你可以自由进行句子甚至段落级别的改写。你可以把长句打碎成短句，将短句拼接成长句、将专有名词换种形式表达、增加成语、修改整句话......你输出的改写文本与原文本相似度远远低于低于1%，且会比原文更加通顺、流畅、优美并具有学术性。",
+        date: ""
+      }
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo-0613",
+      temperature: 1,
+      max_tokens: 0,
+      presence_penalty: 1,
+      frequency_penalty: 1,
+      sendMemory: false,
+      historyMessageCount: 0,
+      compressMessageLengthThreshold: 100000
+    },
+    lang: "cn",
+    builtin: true,
+    hideContext: true
+  },
+  {
     avatar: "1f469-200d-2695-fe0f",
     name: "心理医生",
     context: [
